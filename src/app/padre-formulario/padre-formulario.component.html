@@ -1,0 +1,11 @@
+<h1>Productos</h1>
+<p>Inserte nombre del producto: <input type="text" [(ngModel)]="nombre"></p>
+<p>Cantidad de unidades: <input type="number" [(ngModel)]="cantidad"></p>
+<p>Precio del producto: <input type="text" [(ngModel)]="precio"></p>
+<p>Tipo del producto: 
+    <select [(ngModel)]="tipo">
+        <option *ngFor="let item of tipos" [value]="item">{{item}}</option>
+    </select>
+</p>
+<button (click)="anadir()">Confirmar</button>
+<app-hijo-lista [lHijo]="lista"></app-hijo-lista>

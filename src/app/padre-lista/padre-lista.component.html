@@ -1,0 +1,20 @@
+<h1>Lista Padre</h1>
+<table>
+    <thead>
+        <th>idPedido</th>
+        <th>idCliente</th>
+        <th>nombreCliente</th>
+        <th>totalProductos</th>
+        <th>Importe</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of lPadre">
+            <td>{{item.IdPedido}}</td>
+            <td>{{item.IdCliente}}</td>
+            <td>{{item.NombreCliente}}</td>
+            <td>{{item.TotalProductos}}</td>
+            <td>{{item.Importe}}</td>
+        </tr>
+    </tbody>
+</table>
+<app-hijo-formulario (EnviaDato)="recibeDatos($event)"></app-hijo-formulario>
